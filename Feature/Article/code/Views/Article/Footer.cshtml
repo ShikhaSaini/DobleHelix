@@ -1,0 +1,46 @@
+﻿@{
+    // var item = Sitecore.Context.Database.GetItem("/sitecore/content/Alexa/Home/Settings/GlobalSettings");
+    var item = Sitecore.Context.Database.GetItem("{167070A3-81D5-4289-9709-A430D7E32CDC}");
+}
+
+<style type="text/css">
+    .DisplayBlock {
+        display: block;
+        color: white;
+        /*padding-left: 10%;
+        padding-right: 10%;*/
+    }
+
+
+    p {
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        color: white;
+    }
+
+    .lead {
+        font-size: 1.171875rem;
+        font-weight: 300;
+    }
+</style>
+<div class="container">
+    <div class="text-white bg-primary">
+        <p class="lead">@Html.Sitecore().Field("Copyright", item)</p>
+    </div>
+</div>
+
+
+<div class="DisplayBlock" style="width:auto;height:6%;border:0px yellow solid;font-family:'Segoe UI';padding-bottom:5% !important;display:none">
+    <div style="background-color: blue; width: 100%; top: 0px; display: inline-block;padding-left:6%">
+        <p class="lead">@Html.Sitecore().Field("Copyright", item)</p>
+    </div>
+</div>
+

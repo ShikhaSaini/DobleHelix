@@ -1,0 +1,19 @@
+﻿
+@{
+    // var item = Sitecore.Context.Database.GetItem("/sitecore/content/Alexa/Home/Settings/GlobalSettings");
+    var item = Sitecore.Context.Database.GetItem("{167070A3-81D5-4289-9709-A430D7E32CDC}");
+}
+<main role="main" class="container blog-posts">
+    <div class="blog-post-card card col-lg-4 col-md-6">
+
+        <img src="~/Assets/images/animals.jpg" />
+        <p style="display:none"> @Html.Sitecore().Field("ArticleSmallImage", item)</p>
+        <div class="card-body bg-light">
+            <strong class="d-inline-block mb-2 text-success">Design</strong>
+            <h3 class="card-title"> @Html.Sitecore().Field("Title", item)</h3>
+            <div class="mb-1 text-muted"> @Html.Sitecore().Field("PostedDate", item)</div>
+            <p> @Html.Sitecore().Field("postCard2", item)</p>
+            <a href="#" class="btn btn-warning btn-block">Read on</a>
+        </div>
+    </div>
+    </main>

@@ -1,0 +1,190 @@
+﻿
+
+
+<style type="text/css">
+    .DisplayBlock {
+        display: block;
+        /* padding-left: 7%;
+        padding-right: 7%;*/
+    }
+
+    .lead {
+        font-size: 1.171875rem;
+        font-weight: 300;
+    }
+
+    p {
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        margin-top: 0;
+        margin-bottom: 1rem;
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+    }
+</style>
+
+@{
+    // var item = Sitecore.Context.Database.GetItem("/sitecore/content/Alexa/Home/Settings/GlobalSettings");
+    var item = Sitecore.Context.Database.GetItem("{167070A3-81D5-4289-9709-A430D7E32CDC}");
+}
+<main role="main" class="container blog-posts">
+
+
+    <div class="row">
+        <!-- Begin Repeating Elements Area -->
+        <!-- Begin Repeating Element-->
+
+
+
+
+
+      
+
+
+
+        <div class="blog-post-card card col-lg-4 col-md-6">
+
+            <img src="~/Assets/images/animals.jpg" />
+            <p style="display:none"> @Html.Sitecore().Field("ArticleSmallImage", item)</p>
+            <div class="card-body bg-light">
+                <strong class="d-inline-block mb-2 text-success">Design</strong>
+                <h3 class="card-title"> @Html.Sitecore().Field("Title", item)</h3>
+                <div class="mb-1 text-muted"> @Html.Sitecore().Field("PostedDate", item)</div>
+                <p> @Html.Sitecore().Field("postCard2", item)</p>
+                <a href="#" class="btn btn-warning btn-block">@Html.Sitecore().Field("PostCardButtonText", item)</a>
+            </div>
+        </div>
+
+        <div class="blog-post-card card col-lg-4 col-md-6">
+            <img src="~/Assets/images/developer.jpg" />
+            <p style="display:none"> @Html.Sitecore().Field("ArticleSmallImage", item, new { w = 370, h = 230 })</p>
+            <div class="card-body bg-light">
+                <strong class="d-inline-block mb-2 text-success"> Design</strong>
+                <h3 class="card-title"> @Html.Sitecore().Field("Title", item)</h3>
+                <div class="mb-1 text-muted"> @Html.Sitecore().Field("PostedDate", item)</div>
+                <p> @Html.Sitecore().Field("postCard1", item)</p>
+                <a href="#" class="btn btn-warning btn-block">@Html.Sitecore().Field("PostCardButtonText", item)</a>
+            </div>
+        </div>
+        <div class="blog-post-card card col-lg-4 col-md-6">
+
+            <img src="~/Assets/images/animals.jpg" />
+            <p style="display:none"> @Html.Sitecore().Field("ArticleSmallImage", item)</p>
+            <div class="card-body bg-light">
+                <strong class="d-inline-block mb-2 text-success">Design</strong>
+                <h3 class="card-title"> @Html.Sitecore().Field("Title", item)</h3>
+                <div class="mb-1 text-muted"> @Html.Sitecore().Field("PostedDate", item)</div>
+                <p> @Html.Sitecore().Field("postCard2", item)</p>
+                <a href="#" class="btn btn-warning btn-block">@Html.Sitecore().Field("PostCardButtonText", item)</a>
+            </div>
+        </div>
+        <div class="blog-post-card card col-lg-4 col-md-6">
+            <img src="~/Assets/images/people.jpg" />
+            <p style="display:none"> @Html.Sitecore().Field("ArticleSmallImage", item)</p>
+            <div class="card-body bg-light">
+                <strong class="d-inline-block mb-2 text-success">Design</strong>
+                <h3 class="card-title"> @Html.Sitecore().Field("Title", item)</h3>
+                <div class="mb-1 text-muted"> @Html.Sitecore().Field("PostedDate", item)</div>
+                <p> @Html.Sitecore().Field("postCard3", item)</p>
+                <a href="#" class="btn btn-warning btn-block">@Html.Sitecore().Field("PostCardButtonText", item)</a>
+            </div>
+        </div>
+        <div class="blog-post-card card col-lg-4 col-md-6">
+            <img src="~/Assets/images/arch.jpg" />
+            <p style="display:none"> @Html.Sitecore().Field("ArticleSmallImage", item)</p>
+            <div class="card-body bg-light">
+                <strong class="d-inline-block mb-2 text-success">Design</strong>
+                <h3 class="card-title"> @Html.Sitecore().Field("Title", item)</h3>
+                <div class="mb-1 text-muted"> @Html.Sitecore().Field("PostedDate", item)</div>
+                <p> @Html.Sitecore().Field("postCard4", item)</p>
+                <a href="#" class="btn btn-warning btn-block">@Html.Sitecore().Field("PostCardButtonText", item)</a>
+            </div>
+        </div>
+
+        <div class="blog-post-card card col-lg-4 col-md-6">
+            <img src="~/Assets/images/366.jpg" />
+            <p style="display:none"> @Html.Sitecore().Field("ArticleSmallImage", item)</p>
+            <div class="card-body bg-light">
+                <strong class="d-inline-block mb-2 text-success">Design</strong>
+                <h3 class="card-title"> @Html.Sitecore().Field("Title", item)</h3>
+                <div class="mb-1 text-muted"> @Html.Sitecore().Field("PostedDate", item)</div>
+                <p> @Html.Sitecore().Field("postCard5", item)</p>
+                <a href="#" class="btn btn-warning btn-block">@Html.Sitecore().Field("PostCardButtonText", item)</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="DisplayBlock" style="width: auto; height: 40%; border: 0px yellow solid;margin-bottom:4%;display:none">
+        <div style="float: left; width: 30%; margin-right: 10px">
+            <div id="image" style="width: 100%; top: 0px; display: inline-block; ">
+
+                @Html.Sitecore().Field("ArticleSmallImage", item)
+            </div>
+
+            <div id="ContentBlog" style="width: 100%; top: 0px; display: inline-block; padding-left: 3%; padding-right: 3%; background-color: white;">
+                <p style="color:greenyellow;font-weight:bold">  Design</p>
+                <h2 style="color:black;font-weight:300"> @Html.Sitecore().Field("Title", item)</h2>
+                <p style="color:black">   @Html.Sitecore().Field("PostedDate", item)</p>
+
+                <p class="lead" style="margin:2% !important"> @Html.Sitecore().Field("postCard1", item)</p>
+
+                <button type="button" id="Tag" style="background-color:orangered;color:white;height:30px;width:80%;padding:0px !important;border:none">
+                    Read on
+                </button>
+
+              
+            </div>
+        </div>
+        <div style="float:left;width:30%;margin:10px">
+            <div id="image" style="width: 100%; top: 0px; display: inline-block; ">
+
+                @Html.Sitecore().Field("ArticleSmallImage", item)
+            </div>
+
+            <div id="ContentBlog" style="width: 100%; top: 0px; display: inline-block; padding-left: 3%; padding-right: 3%; background-color: white;">
+                <p style="color:greenyellow;font-weight:bold">  Design</p>
+                <h2 style="color:black;font-weight:300"> @Html.Sitecore().Field("Title", item)</h2>
+                <p style="color:black">   @Html.Sitecore().Field("PostedDate", item)</p>
+
+                <p class="lead" style="margin:2% !important"> @Html.Sitecore().Field("postCard1", item)</p>
+
+                <button type="button" id="Tag" style="background-color:orangered;color:white;height:30px;width:80%;padding:0px !important;border:none">
+                    Read on
+                </button>
+
+               
+            </div>
+        </div>
+        <div style="float: left; width: 30%; margin: 10px">
+            <div id="image" style="width: 100%; top: 0px; display: inline-block; ">
+
+                @Html.Sitecore().Field("ArticleSmallImage", item)
+            </div>
+
+            <div id="ContentBlog" style="width: 100%; top: 0px; display: inline-block; padding-left: 3%; padding-right: 3%; background-color: white;">
+                <p style="color:greenyellow;font-weight:bold">  Design</p>
+                <h2 style="color:black;font-weight:300"> @Html.Sitecore().Field("Title", item)</h2>
+                <p style="color:black">   @Html.Sitecore().Field("PostedDate", item)</p>
+
+                <p class="lead" style="margin:2% !important"> @Html.Sitecore().Field("postCard1", item)</p>
+
+                <button type="button" id="Tag" style="background-color:orangered;color:white;height:30px;width:80%;padding:0px !important;border:none">
+                    Read on
+                </button>
+
+              
+              
+            </div>
+        </div>
+    </div>
+</main>
+
+
+
